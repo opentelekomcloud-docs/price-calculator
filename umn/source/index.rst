@@ -1,10 +1,10 @@
-================================================
+===========================================
 Welcome to the documentation of Pricing-API
-================================================
+===========================================
 
 
 1. Stats
-=======================
+========
 Document status: 2023-01-24
 
 Version: 0.5
@@ -22,7 +22,7 @@ https://calculator.otc-services.com/de/open-telekom-price-api-ui/
 
 
 2. Parameters
-=======================
+=============
 
 The values can be sent via POST or GET.
 
@@ -34,7 +34,7 @@ All entries are validated, filtered and grouped by service, if no cache entry fo
 was found. A pagination structure is also supplied for very large amounts of data.
 
 2.1.Validation
----------------------------
+--------------
 • Numerical values are always cast to an <Int>
 • The values of responseFormat, serviceName, groupBy, region and columns as well as the keys of filterBy are compared with the stored identifiers, settings or with the field names in the database schema. This eliminates any values that are beyond the technical realities.
 • Only the value of filterBy must be filtered and escaped
@@ -42,7 +42,7 @@ was found. A pagination structure is also supplied for very large amounts of dat
 
 
 2.2.Overview
--------------------------
+------------
 
 
 +-----------------------------------+------------------------+-------------------------+----------------------+----------------------------------+--------------------------------------------+
@@ -139,7 +139,7 @@ was found. A pagination structure is also supplied for very large amounts of dat
 
 
 3. Permitted values
-=======================
+===================
 
 3.1 Overview of regions
 ---------------------------
@@ -154,7 +154,7 @@ was found. A pagination structure is also supplied for very large amounts of dat
 
 
 3.2.4.3. Overview of column names
----------------------------
+---------------------------------
 
 
 In the case of column names (**columns**, **filters** and keys for **filterBy** or as values for **groupBy**), only
@@ -205,7 +205,7 @@ filtering are listed below.
 
 
 3.3.Overview of services
---------------------------
+------------------------
 
 
 
@@ -357,14 +357,14 @@ that are suitable for filtering are listed below.
 
 
 4. Returned values
-=======================
+==================
 
 
 The JSON format is currently provided for error messages and to return results.
 
 
 4.1. Successful request
---------------------------
+-----------------------
 
 With a successful standard request (without parameters) this could look like this:
 
@@ -464,7 +464,7 @@ With a successful standard request (without parameters) this could look like thi
 
 
 4.2. Incorrect request
---------------------------
+----------------------
 An error response could look like this: 
 {
  "response": {
@@ -480,7 +480,7 @@ An error response could look like this:
 
 
 5. Requests
-=======================
+===========
 
 
 The values can be sent via POST or GET. The order or number of the parameters (see chapter 3) is not
@@ -488,7 +488,7 @@ relevant, since all parameters can be used optionally and independently of one a
 
 
 5.1 Errors 
---------------------------
+----------
 
 All parameters are validated and all errors will result in a failed request. Ignorable errors are
 therefore not eliminated.
@@ -516,7 +516,7 @@ is invalid.
 
 
 5.2. Standard request
--------------------------
+---------------------
 
 
 The standard request works without any parameters and therefore returns all product data of all
@@ -550,7 +550,7 @@ Request: https://calculator.otc-services.com/open-telekom-price-api
 
 
 5.3. Single service request
--------------------------
+---------------------------
 
 To load the data of an individual service, only the **serviceName** (see chapter 3. Parameters) from one
 of the possible services (see chapter 4. Permitted values) has to be specified.
@@ -592,7 +592,7 @@ Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName=
 
 
 5.4. Single service request with filtering
--------------------------
+------------------------------------------
 
 To load the data of an individual service, only the **serviceName** (see chapter 3. Parameters) of one
 service (see chapter 4. Permitted values) must be specified.
@@ -639,7 +639,7 @@ Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[
 
 
 5.5. Single service request with filtering and selected fields
--------------------------
+--------------------------------------------------------------
 
 To load the data of an individual service, only the **serviceName** (see chapter 3. Parameters) of one
 service (see chapter 4. Permitted values) must be specified.
@@ -687,7 +687,7 @@ filterBy[opiFlavour][0]=s2.medium.4&columns[]=productName&columns[]=id
 
 
 5.6.Multiple service request
--------------------------
+----------------------------
 To load the data of several services, they only have to be specified as an array in the **serviceName**.
 
 
@@ -715,7 +715,7 @@ Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[
 
 
 5.7. Single record request
--------------------------
+--------------------------
 The data records can be filtered using the **filterBy** parameter, so that only one data record is
 returned in the end. The product identifiers are unique across the services, so that you don't even
 have to enter a service name here.
