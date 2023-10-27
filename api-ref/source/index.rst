@@ -368,113 +368,116 @@ The JSON format is currently provided for error messages and to return results.
 
 With a successful standard request (without parameters) this could look like this:
 
-{
- "response":{
- "url":"https://calculator.otc-services.com/open-telekom-price-api/",
- "parameters":{
- "productType":"OTC",
- "serviceName":["ecs"],
- "limitMax":"25",
- "nocache":"0"
- },
- "httpCode":200,
- "code":"Success",
- "message":"Product data successfully loaded!",
- "stats":{
- "count":122,
- "recordsCount":25,
- "maxPages":5,
- "recordsPerPage":25,
- "currentPage":1,
- "currentUri":"https://example.com/?productType=OTC...limitFrom=0"
- },
- "result":{
- "ecs":[
- {
- ...
- }
- ]
- },
- "columns":{
- "id":"ID",
- "productId":"Service ID",
- "opiFlavour":"Flavor",
- "productName":"Product name",
- "osUnit":"OS unit",
- ...
- },
- "services":{
- "recordscount":1,
- "records":{
- "ecs":{
- "title":"Elastic Cloud Server",
- "moduleType":"CloudServerServiceBundled",
- "description":"Choose from our numerous basic VM flavors.",
- "identifier":"ELASTIC CLOUD SERVER (BUNDLED)",
- "parameterIdentifier":"ecs"
- }
- }
- }
-"pagination":{
- "first":{
- "number":1,
- "disabled":true,
- "href":"https://calculator.otc-services.com/...&limitFrom=0",
- "current":true,
- "separator":false
- },
- "prev":{
- "number":1,
- "disabled":true,
- "href":" https://calculator.otc-services.com/...&limitFrom=0",
- "current":true,
- "separator":false
- },
- "numbers":[
- {
- "number":1,
- "disabled":true,
- "href":"https://calculator.otc-services.com/...&limitFrom=0",
- "current":true,
- "separator":false
- },
- {
- "number":2,
- "disabled":false,
- "href":"https://calculator.otc-services.com/...&limitFrom=25",
- "current":false,
- "separator":false
- },
- ...
- ],
- "next":{
- ...
- },
- "last":{
- "number":5,
- "disabled":false,
- "href":"https://calculator.otc-services.com/...&limitFrom=100",
- "current":false,
- "separator":false
- }
- }
- }
-}
+.. code-block:: JSON
+   {
+    "response":{
+    "url":"https://calculator.otc-services.com/open-telekom-price-api/",
+    "parameters":{
+    "productType":"OTC",
+    "serviceName":["ecs"],
+    "limitMax":"25",
+    "nocache":"0"
+    },
+    "httpCode":200,
+    "code":"Success",
+    "message":"Product data successfully loaded!",
+    "stats":{
+    "count":122,
+    "recordsCount":25,
+    "maxPages":5,
+    "recordsPerPage":25,
+    "currentPage":1,
+    "currentUri":"https://example.com/?productType=OTC...limitFrom=0"
+    },
+    "result":{
+    "ecs":[
+    {
+    ...
+    }
+    ]
+    },
+    "columns":{
+    "id":"ID",
+    "productId":"Service ID",
+    "opiFlavour":"Flavor",
+    "productName":"Product name",
+    "osUnit":"OS unit",
+    ...
+    },
+    "services":{
+    "recordscount":1,
+    "records":{
+    "ecs":{
+    "title":"Elastic Cloud Server",
+    "moduleType":"CloudServerServiceBundled",
+    "description":"Choose from our numerous basic VM flavors.",
+    "identifier":"ELASTIC CLOUD SERVER (BUNDLED)",
+    "parameterIdentifier":"ecs"
+    }
+    }
+    }
+   "pagination":{
+    "first":{
+    "number":1,
+    "disabled":true,
+    "href":"https://calculator.otc-services.com/...&limitFrom=0",
+    "current":true,
+    "separator":false
+    },
+    "prev":{
+    "number":1,
+    "disabled":true,
+    "href":" https://calculator.otc-services.com/...&limitFrom=0",
+    "current":true,
+    "separator":false
+    },
+    "numbers":[
+    {
+    "number":1,
+    "disabled":true,
+    "href":"https://calculator.otc-services.com/...&limitFrom=0",
+    "current":true,
+    "separator":false
+    },
+    {
+    "number":2,
+    "disabled":false,
+    "href":"https://calculator.otc-services.com/...&limitFrom=25",
+    "current":false,
+    "separator":false
+    },
+    ...
+    ],
+    "next":{
+    ...
+    },
+    "last":{
+    "number":5,
+    "disabled":false,
+    "href":"https://calculator.otc-services.com/...&limitFrom=100",
+    "current":false,
+    "separator":false
+    }
+    }
+    }
+   }
 
 
 
 4.2. Incorrect request
 ----------------------
-An error response could look like this: 
-{
- "response": {
- "url": "https:...&responseFormat=json",
- "parameters": {},
- "httpCode": 500,
- "code": "Error",
- "message": "Validation error!",
- }
-}
+An error response could look like this:
+
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https:...&responseFormat=json",
+    "parameters": {},
+    "httpCode": 500,
+    "code": "Error",
+    "message": "Validation error!",
+    }
+   }
 
 
 
@@ -500,16 +503,16 @@ therefore not eliminated.
 2. An error is always returned, if one of the parameter values within the permitted parameters
 is invalid.
 
-
-{
- "response": {
- "url": "https:...&responseFormat=json",
- "parameters": {},
- "httpCode": 500,
- "code": "Error",
- "message": "Computer says: No!"
- }
-}
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https:...&responseFormat=json",
+    "parameters": {},
+    "httpCode": 500,
+    "code": "Error",
+    "message": "Computer says: No!"
+    }
+   }
 
 
 
@@ -524,29 +527,31 @@ regions, grouped into the respective services.
 
 
 Request: https://calculator.otc-services.com/open-telekom-price-api
-{
- "response": {
- "cachedAt": "2020-01-27 11:25:37",
- "url": "https://calculator.otc-services.com/open-telekom-price-api",
- "parameters": {},
- "responseCode": 200,
- "code": "success",
- "message": "Success!",
- "stats": {
- ...
- },
- "result": {
- "services": {
- "ecs": {
- ...
- },
- "obs": {
- ...
- }
- }
- }
- }
-}
+
+.. code-block:: JSON
+   {
+    "response": {
+    "cachedAt": "2020-01-27 11:25:37",
+    "url": "https://calculator.otc-services.com/open-telekom-price-api",
+    "parameters": {},
+    "responseCode": 200,
+    "code": "success",
+    "message": "Success!",
+    "stats": {
+    ...
+    },
+    "result": {
+    "services": {
+    "ecs": {
+    ...
+    },
+    "obs": {
+    ...
+    }
+    }
+    }
+    }
+   }
 
 
 5.3. Single service request
@@ -557,37 +562,39 @@ of the possible services (see chapter 4. Permitted values) has to be specified.
 
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName=ecs
-{
- "response": {
- "url": "https://calculator.otc-services.com/open-telekom-price-api/",
- "parameters": {
- "serviceName": "ecs"
- },
- "responseCode": 200,
- "code": "success",
- "message": "Success!",
- "stats": {
- ...
- },
- "result": {
- "services": {
- "ecs": [
- 0: {
- "id": "OTC_S2M4_LI",
- "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
- "opiFlavour": "s2.medium.4",
- "priceAmount": 0.046,
- ...
- },
- 1: {
-...
- },
- ...
- ]
- }
- }
- }
-}
+
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "parameters": {
+    "serviceName": "ecs"
+    },
+    "responseCode": 200,
+    "code": "success",
+    "message": "Success!",
+    "stats": {
+    ...
+    },
+    "result": {
+    "services": {
+    "ecs": [
+    0: {
+    "id": "OTC_S2M4_LI",
+    "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
+    "opiFlavour": "s2.medium.4",
+    "priceAmount": 0.046,
+    ...
+    },
+    1: {
+   ...
+    },
+    ...
+    ]
+    }
+    }
+    }
+   }
 
 
 
@@ -600,42 +607,44 @@ In addition, those columns to which the filtering is to be applied must be speci
 
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& filterBy[opiFlavour][0]=s2.medium.4
-{
- "response": {
- "url": "https://calculator.otc-services.com/open-telekom-price-api/",
- "parameters": {
- "serviceName": ["ecs"],
- "filterBy": {
- "opiFlavour": ["s2.medium.4"]
- }
- },
- ...
- "stats": {
- ...
- },
- "result": {
- "services": {
- "ecs": [
- 0: {
- "id": "OTC_S2M4_LI",
- "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
- "opiFlavour": "s2.medium.4",
- "priceAmount": 0.046,
- ...
- },
- 1: {
- "id": "OTC_S2M4_OR",
- "productName": "General Purpose 1:4 v2 s2.m.4 Oracle",
- "opiFlavour": "s2.medium.4",
- "priceAmount": 0.077266,
- ...
- },
- ...
- ]
- }
- }
- }
-}
+
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "parameters": {
+    "serviceName": ["ecs"],
+    "filterBy": {
+    "opiFlavour": ["s2.medium.4"]
+    }
+    },
+    ...
+    "stats": {
+    ...
+    },
+    "result": {
+    "services": {
+    "ecs": [
+    0: {
+    "id": "OTC_S2M4_LI",
+    "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
+    "opiFlavour": "s2.medium.4",
+    "priceAmount": 0.046,
+    ...
+    },
+    1: {
+    "id": "OTC_S2M4_OR",
+    "productName": "General Purpose 1:4 v2 s2.m.4 Oracle",
+    "opiFlavour": "s2.medium.4",
+    "priceAmount": 0.077266,
+    ...
+    },
+    ...
+    ]
+    }
+    }
+    }
+   }
 
 
 5.5. Single service request with filtering and selected fields
@@ -651,37 +660,39 @@ be returned. The order of the fields within the request is relevant for the stru
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs&
 filterBy[opiFlavour][0]=s2.medium.4&columns[]=productName&columns[]=id
-{
- "response": {
- "url": "https://calculator.otc-services.com/open-telekom-price-api/",
- "parameters": {
- "serviceName": ["ecs"],
- "filterBy": {
- "opiFlavour": ["s2.medium.4"]
- }
- "columns": {
- 0: "productName",
- 1: "id"
- }
- },
- ...
- "result": {
- "services": {
- "ecs": [
- 0: {
- "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
- "id": "OTC_S2M4_LI"
- },
- 1: {
- "productName": "General Purpose 1:4 v2 s2.m.4 Oracle",
- "id": "OTC_S2M4_OR"
- },
- ...
- ]
- }
- }
- }
-}
+
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "parameters": {
+    "serviceName": ["ecs"],
+    "filterBy": {
+    "opiFlavour": ["s2.medium.4"]
+    }
+    "columns": {
+    0: "productName",
+    1: "id"
+    }
+    },
+    ...
+    "result": {
+    "services": {
+    "ecs": [
+    0: {
+    "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
+    "id": "OTC_S2M4_LI"
+    },
+    1: {
+    "productName": "General Purpose 1:4 v2 s2.m.4 Oracle",
+    "id": "OTC_S2M4_OR"
+    },
+    ...
+    ]
+    }
+    }
+    }
+   }
 
 
 
@@ -692,25 +703,27 @@ To load the data of several services, they only have to be specified as an array
 
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& serviceName[1]=obs
-{
- "response": {
- "url": "https://calculator.otc-services.com/open-telekom-price-api/",
- "parameters": {
- "serviceName": ["ecs", "obs"]
- },
- ...
- "result": {
- "services": {
- "ecs": [
- ...
- ],
- "obs": [
- ...
- ]
- }
- }
- }
-}
+
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "parameters": {
+    "serviceName": ["ecs", "obs"]
+    },
+    ...
+    "result": {
+    "services": {
+    "ecs": [
+    ...
+    ],
+    "obs": [
+    ...
+    ]
+    }
+    }
+    }
+   }
 
 
 
@@ -721,25 +734,27 @@ returned in the end. The product identifiers are unique across the services, so 
 have to enter a service name here.
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?filterBy[id][0]=OTC_S2M4_LI
-{
- "response": {
- "url": "https://calculator.otc-services.com/open-telekom-price-api/",
- "parameters": {
- "filterBy": {
- "id": ["OTC_S2M4_LI"]
- }
- },
- ...
- "result": {
- "services": {
- "ecs": {
- 0: {
- "id": "OTC_S2M4_LI",
- "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
- "opiFlavour": "s2.medium.4",
- ...
- }
- }
- }
- }
- }
+
+.. code-block:: JSON
+   {
+    "response": {
+    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "parameters": {
+    "filterBy": {
+    "id": ["OTC_S2M4_LI"]
+    }
+    },
+    ...
+    "result": {
+    "services": {
+    "ecs": {
+    0: {
+    "id": "OTC_S2M4_LI",
+    "productName": "General Purpose 1:4 v2 s2.m.4 Linux",
+    "opiFlavour": "s2.medium.4",
+    ...
+    }
+    }
+    }
+    }
+    }
