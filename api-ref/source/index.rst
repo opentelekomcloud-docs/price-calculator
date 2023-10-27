@@ -369,6 +369,7 @@ The JSON format is currently provided for error messages and to return results.
 With a successful standard request (without parameters) this could look like this:
 
 .. code-block:: json
+
    {
     "response":{
     "url":"https://calculator.otc-services.com/open-telekom-price-api/",
@@ -469,6 +470,7 @@ With a successful standard request (without parameters) this could look like thi
 An error response could look like this:
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https:...&responseFormat=json",
@@ -504,6 +506,7 @@ therefore not eliminated.
 is invalid.
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https:...&responseFormat=json",
@@ -529,6 +532,7 @@ regions, grouped into the respective services.
 Request: https://calculator.otc-services.com/open-telekom-price-api
 
 .. code-block:: json
+
    {
     "response": {
     "cachedAt": "2020-01-27 11:25:37",
@@ -564,6 +568,7 @@ of the possible services (see chapter 4. Permitted values) has to be specified.
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName=ecs
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https://calculator.otc-services.com/open-telekom-price-api/",
@@ -609,6 +614,7 @@ In addition, those columns to which the filtering is to be applied must be speci
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& filterBy[opiFlavour][0]=s2.medium.4
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https://calculator.otc-services.com/open-telekom-price-api/",
@@ -662,6 +668,7 @@ Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[
 filterBy[opiFlavour][0]=s2.medium.4&columns[]=productName&columns[]=id
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https://calculator.otc-services.com/open-telekom-price-api/",
@@ -705,6 +712,7 @@ To load the data of several services, they only have to be specified as an array
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& serviceName[1]=obs
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https://calculator.otc-services.com/open-telekom-price-api/",
@@ -736,6 +744,7 @@ have to enter a service name here.
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?filterBy[id][0]=OTC_S2M4_LI
 
 .. code-block:: json
+
    {
     "response": {
     "url": "https://calculator.otc-services.com/open-telekom-price-api/",
