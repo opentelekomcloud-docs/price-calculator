@@ -126,7 +126,7 @@ was found. A pagination structure is also supplied for very large amounts of dat
 |                                   |                        |                         |                      | are currently employed at the    |                                            |  
 |                                   |                        |                         |                      | same time.                       |                                            | 
 +-----------------------------------+------------------------+-------------------------+----------------------+----------------------------------+--------------------------------------------+
-|     responseFormat                |     rf                 |      no                 |       String         | The output format can be         | responseFormat=json                        |
+|     responseFormat                |     rf                 |      no                 |       String         | The output format can be         | responseFormat=                        |
 |                                   |                        |                         |                      | determined with this value.      |                                            | 
 |                                   |                        |                         |                      |                                  | responseFormat=xml                         |             
 |                                   |                        |                         |                      | The data is returned in a JSON   |                                            |            
@@ -368,7 +368,7 @@ The JSON format is currently provided for error messages and to return results.
 
 With a successful standard request (without parameters) this could look like this:
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response":{
@@ -469,7 +469,7 @@ With a successful standard request (without parameters) this could look like thi
 ----------------------
 An error response could look like this:
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -505,7 +505,7 @@ therefore not eliminated.
 2. An error is always returned, if one of the parameter values within the permitted parameters
 is invalid.
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -531,7 +531,7 @@ regions, grouped into the respective services.
 
 Request: https://calculator.otc-services.com/open-telekom-price-api
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -567,7 +567,7 @@ of the possible services (see chapter 4. Permitted values) has to be specified.
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName=ecs
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -613,7 +613,7 @@ In addition, those columns to which the filtering is to be applied must be speci
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& filterBy[opiFlavour][0]=s2.medium.4
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -667,7 +667,7 @@ be returned. The order of the fields within the request is relevant for the stru
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs&
 filterBy[opiFlavour][0]=s2.medium.4&columns[]=productName&columns[]=id
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -711,7 +711,7 @@ To load the data of several services, they only have to be specified as an array
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& serviceName[1]=obs
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
@@ -743,7 +743,7 @@ have to enter a service name here.
 
 Request: https://calculator.otc-services.com/open-telekom-priceapi/?filterBy[id][0]=OTC_S2M4_LI
 
-.. code-block:: json
+.. code-block:: console
 
    {
     "response": {
