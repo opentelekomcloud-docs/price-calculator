@@ -126,7 +126,7 @@ was found. A pagination structure is also supplied for very large amounts of dat
 |                                   |                        |                         |                      | are currently employed at the    |                                            |  
 |                                   |                        |                         |                      | same time.                       |                                            | 
 +-----------------------------------+------------------------+-------------------------+----------------------+----------------------------------+--------------------------------------------+
-|     responseFormat                |     rf                 |      no                 |       String         | The output format can be         | responseFormat=                        |
+|     responseFormat                |     rf                 |      no                 |       String         | The output format can be         | responseFormat=                            |
 |                                   |                        |                         |                      | determined with this value.      |                                            | 
 |                                   |                        |                         |                      |                                  | responseFormat=xml                         |             
 |                                   |                        |                         |                      | The data is returned in a JSON   |                                            |            
