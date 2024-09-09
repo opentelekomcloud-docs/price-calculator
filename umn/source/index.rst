@@ -1,3 +1,3 @@
 ================================================
-Welcome to the documentation of price-calculator
+Welcome to the documentation of price-calcualtor
 ================================================
