@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'pc-api-ref.tex',
-     u'Price Calculator - API Reference',
+    u'Price Calculator - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
