@@ -11,13 +11,13 @@ Version: 0.5
 
 End points:
 
-https://calculator.otc-services.com/en/open-telekom-price-api/  
+https://calculator.otc-service.com/en/open-telekom-price-api/  
 
-https://calculator.otc-services.com/en/open-telekom-price-api-ui/ 
+https://calculator.otc-service.com/en/open-telekom-price-api-ui/ 
 
-https://calculator.otc-services.com/de/open-telekom-price-api/    
+https://calculator.otc-service.com/de/open-telekom-price-api/    
 
-https://calculator.otc-services.com/de/open-telekom-price-api-ui/ 
+https://calculator.otc-service.com/de/open-telekom-price-api-ui/ 
 
 
 
@@ -372,7 +372,7 @@ With a successful standard request (without parameters) this could look like thi
 
    {
     "response":{
-    "url":"https://calculator.otc-services.com/open-telekom-price-api/",
+    "url":"https://calculator.otc-service.com/open-telekom-price-api/",
     "parameters":{
     "productType":"OTC",
     "serviceName":["ecs"],
@@ -421,14 +421,14 @@ With a successful standard request (without parameters) this could look like thi
     "first":{
     "number":1,
     "disabled":true,
-    "href":"https://calculator.otc-services.com/...&limitFrom=0",
+    "href":"https://calculator.otc-service.com/...&limitFrom=0",
     "current":true,
     "separator":false
     },
     "prev":{
     "number":1,
     "disabled":true,
-    "href":" https://calculator.otc-services.com/...&limitFrom=0",
+    "href":" https://calculator.otc-service.com/...&limitFrom=0",
     "current":true,
     "separator":false
     },
@@ -436,14 +436,14 @@ With a successful standard request (without parameters) this could look like thi
     {
     "number":1,
     "disabled":true,
-    "href":"https://calculator.otc-services.com/...&limitFrom=0",
+    "href":"https://calculator.otc-service.com/...&limitFrom=0",
     "current":true,
     "separator":false
     },
     {
     "number":2,
     "disabled":false,
-    "href":"https://calculator.otc-services.com/...&limitFrom=25",
+    "href":"https://calculator.otc-service.com/...&limitFrom=25",
     "current":false,
     "separator":false
     },
@@ -455,7 +455,7 @@ With a successful standard request (without parameters) this could look like thi
     "last":{
     "number":5,
     "disabled":false,
-    "href":"https://calculator.otc-services.com/...&limitFrom=100",
+    "href":"https://calculator.otc-service.com/...&limitFrom=100",
     "current":false,
     "separator":false
     }
@@ -529,14 +529,14 @@ The standard request works without any parameters and therefore returns all prod
 regions, grouped into the respective services.
 
 
-Request: https://calculator.otc-services.com/open-telekom-price-api
+Request: https://calculator.otc-service.com/open-telekom-price-api
 
 .. code-block:: console
 
    {
     "response": {
     "cachedAt": "2020-01-27 11:25:37",
-    "url": "https://calculator.otc-services.com/open-telekom-price-api",
+    "url": "https://calculator.otc-service.com/open-telekom-price-api",
     "parameters": {},
     "responseCode": 200,
     "code": "success",
@@ -565,13 +565,13 @@ To load the data of an individual service, only the **serviceName** (see chapter
 of the possible services (see chapter 4. Permitted values) has to be specified.
 
 
-Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName=ecs
+Request: https://calculator.otc-service.com/open-telekom-priceapi/?serviceName=ecs
 
 .. code-block:: console
 
    {
     "response": {
-    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "url": "https://calculator.otc-service.com/open-telekom-price-api/",
     "parameters": {
     "serviceName": "ecs"
     },
@@ -611,13 +611,13 @@ service (see chapter 4. Permitted values) must be specified.
 In addition, those columns to which the filtering is to be applied must be specified via **filterBy**.
 
 
-Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& filterBy[opiFlavour][0]=s2.medium.4
+Request: https://calculator.otc-service.com/open-telekom-priceapi/?serviceName[0]=ecs& filterBy[opiFlavour][0]=s2.medium.4
 
 .. code-block:: console
 
    {
     "response": {
-    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "url": "https://calculator.otc-service.com/open-telekom-price-api/",
     "parameters": {
     "serviceName": ["ecs"],
     "filterBy": {
@@ -664,14 +664,14 @@ be returned. The order of the fields within the request is relevant for the stru
 
 
 
-Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs&
+Request: https://calculator.otc-service.com/open-telekom-priceapi/?serviceName[0]=ecs&
 filterBy[opiFlavour][0]=s2.medium.4&columns[]=productName&columns[]=id
 
 .. code-block:: console
 
    {
     "response": {
-    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "url": "https://calculator.otc-service.com/open-telekom-price-api/",
     "parameters": {
     "serviceName": ["ecs"],
     "filterBy": {
@@ -709,13 +709,13 @@ filterBy[opiFlavour][0]=s2.medium.4&columns[]=productName&columns[]=id
 To load the data of several services, they only have to be specified as an array in the **serviceName**.
 
 
-Request: https://calculator.otc-services.com/open-telekom-priceapi/?serviceName[0]=ecs& serviceName[1]=obs
+Request: https://calculator.otc-service.com/open-telekom-priceapi/?serviceName[0]=ecs& serviceName[1]=obs
 
 .. code-block:: console
 
    {
     "response": {
-    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "url": "https://calculator.otc-service.com/open-telekom-price-api/",
     "parameters": {
     "serviceName": ["ecs", "obs"]
     },
@@ -741,13 +741,13 @@ The data records can be filtered using the **filterBy** parameter, so that only 
 returned in the end. The product identifiers are unique across the services, so that you don't even
 have to enter a service name here.
 
-Request: https://calculator.otc-services.com/open-telekom-priceapi/?filterBy[id][0]=OTC_S2M4_LI
+Request: https://calculator.otc-service.com/open-telekom-priceapi/?filterBy[id][0]=OTC_S2M4_LI
 
 .. code-block:: console
 
    {
     "response": {
-    "url": "https://calculator.otc-services.com/open-telekom-price-api/",
+    "url": "https://calculator.otc-service.com/open-telekom-price-api/",
     "parameters": {
     "filterBy": {
     "id": ["OTC_S2M4_LI"]
